@@ -1,15 +1,16 @@
 
-        import * as Game from "./gameInstance.js"
+        import * as Game from "./gameInstance.js";
+        import * as EventGenerator from "./eventGenerator.js";
 
         // let money = 0;
 
-        const question = document.getElementById('question');
+        // const question = document.getElementById('question');
         // const moneyDisplay = document.getElementById('money-display');
-        const no = document.getElementById('no');
-        const yes = document.getElementById('yes');
+        // const no = document.getElementById('no');
+        // const yes = document.getElementById('yes');
         const next = document.getElementById('next');
-        const messageDiv = document.getElementById('purchase-message-div');
-        const messageText = document.getElementById('purchase-message');
+        // const messageDiv = document.getElementById('answer-message-div');
+        // const messageText = document.getElementById('answer-message');
         // const playerNameTitle = document.getElementById('player-name-title');
         const nameInput = document.getElementById('name');
         const submitNameButton = document.getElementById('submit-name');
@@ -24,7 +25,7 @@
         
         // Initial display update
         // updateMoneyDisplay();
-
+/*
         no.addEventListener('click', () => {
             // money += 1; // Add $1
             appInstance.addMoney(1);
@@ -44,7 +45,7 @@
             messageText.innerHTML = " you didn't buy spotify premium ($10/month) </br>";
             // updateMoneyDisplay();
         });
-
+*/
      
 
         submitNameButton.addEventListener('click', () => {
@@ -55,6 +56,7 @@
                 appInstance.setPlayerName(playerName);
                 initialScreen.hidden = true;
                 mainDiv.hidden = false
+                appInstance.nextDay();
             }
         });
 
