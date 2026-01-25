@@ -70,13 +70,23 @@ export class GameInstance {
     this.day += 1;
     this.setDay(this.day);
 
+    var change = 0
+
+    // Receive monthly salary
     if(this.day%14 == 0){
-        this.addMoney(this.monthly_salary/2);
+        change += this.monthly_salary/2;
     }
 
+    // Deduct rent and bills
     if(this.day%28 == 0){
-        this.addMoney(-(this.rent + this.bills));
+        change -= this.rent + this.bills;
     }
+
+    // Deduct food daily
+    change -= 25; // add condition when grocery shopping is implemented
+
+    // Apply money change
+    this.addMoney(change);
 
   }
 
