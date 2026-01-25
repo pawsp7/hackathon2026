@@ -1,7 +1,9 @@
+import * as EventGenerator from './eventGenerator.js'
+
 export class GameInstance {
   constructor() {
     this.playerName = '';
-    this.day = 1;
+    this.day = 0;
     this.happiness = 100;
     this.stress = 0;
     this.money = 1000;
@@ -14,7 +16,12 @@ export class GameInstance {
     this.moneyDisplay = document.getElementById('money-display');
     this.dayDisplay = document.getElementById('day-display');
 
+    this.eventGenerator;
+
+    this.initializeEventGenerator();
     this.initializeUI();
+
+    
   }
 
   getPlayerName() {
@@ -88,6 +95,21 @@ export class GameInstance {
     // Apply money change
     this.addMoney(change);
 
+    // Generate random event
+    document.getElementById('answer-message-div').hidden = true;
+    // 75% chance to be true
+    if (Math.random() < 0.75) {
+        console.log("generating event");
+        document.getElementById("no-event").hidden = true;
+        this.eventGenerator.generateEvent();
+        document.getElementById("question").hidden = false;
+        document.getElementById("next").hidden = true;
+    } else {
+        document.getElementById("no-event").hidden = false;
+        document.getElementById("next").hidden = false;
+    }
+
+
   }
 
   initializeUI(){
@@ -95,5 +117,9 @@ export class GameInstance {
     this.setMoney(this.money);
     this.setDay(this.day);
     console.log("Game Instance created");
+  }
+
+  initializeEventGenerator(self) {
+    this.eventGenerator = new EventGenerator.EventGenerator();
   }
 }
