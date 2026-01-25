@@ -49,6 +49,7 @@
      
 
         submitNameButton.addEventListener('click', () => {
+            console.log("Submit name");
             const playerName = nameInput.value.trim();
             if (playerName) {
                 // playerNameTitle.textContent = `Player Name: ${playerName}`;

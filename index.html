@@ -13,19 +13,19 @@
     <header></header>
         <div class="header">
             <div class="box3">
-                <h1>$1000</h1>
+                <h1>$<span id="money-display">0</span></h1>
             </div>
             <div>
                 <img>
             </div>
             <div class="box3">
-                <h1>NAME</h1>
-            </div> 
+                <h1><span id="player-name-title"></span></h1>
+            </div>
             <div>
                 <img>
             </div>
             <div class="box3">
-                <h1>DAY 24</h1>
+                <h1>DAY <span id="day-display">1</span></h1>
             </div>
         </div>   
     </header>
@@ -41,16 +41,20 @@
             </section>
             </div>
 
-            <div class="center"><h3>Next pay day: {day}</h3><img src="images/apartment.png"></div>
+            <div class="center">
+                <h3>Next pay day (+ $1400): <span id="next-payday">14</span></h3>
+                <h3>Next rent day (- $1150): <span id="next-rent-day">28</span></h3>
+                <img src="images/apartment.png">
+            </div>
 
             <div class="status">
 
                 <h2>Happiness</h2>
             
-                 <p class="happyBar"></p>
+                 <p class="happyBar"><span id="happy-value">100</span>/100</p>
                 
                 <h2>Stress</h2>
-                <p class="stressBar" id="stressBarFill"></p>
+                <p class="stressBar" id="stressBarFill"><span id="stress-value">0</span>/100</p>
 
             </div>
         </div>
@@ -65,25 +69,37 @@
             </div>
             <div>
             </div>
-            <div>
-                
-    <div id="card">
-        <div id="question">
-            <h2>Do you want spotify premium?</h2>
-            <p>it will cost $10</p>
-            <button id="no">no</button>
-            <button id="yes">yes</button>
-        </div>
-        <div id="purchase-message"></div>
+            <!-- <div id = "main-div">
+                    <h2>Player Name: <span id="player-name-title">....</span></h2>
+                    <h2>Money: $<span id="money-display">0</span></h2>
+                    <h2>Day: <span id="day-display">1</span></h2>
+            </div> -->
+            <div id="initial-screen">
+                <input type="text" id="name" placeholder="Type your name...">
+                <button id="submit-name">Submit</button>
+            </div>
+            <div id = "main-div" hidden>
+                <div id="card">
+                    <div id="question">
+                        <h2 id="question-text"></h2>
+                        <button id="no">no</button>
+                        <button id="yes">yes</button>
+                    </div>
+                    <div id="answer-message-div">
+                        <p id="answer-message"></p>
+                        <p id="answer-stats"></p>
+                    </div>
+                    <p id="no-event">You go about your day normally.</p>
+                    <button id="next">Next</button>
 
-    </div>
-                <!-- <p class="textBox"><a>INSERT TEXT BOX HERE</a></p> -->
-            </div> 
+                </div>
+            </div>
             <div>
                 <img>
             </div>
         </div>  
     </footer>
-    <script src="scripts/script.js"></script>
+    <!-- <script src="scripts/script.js"></script> -->
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

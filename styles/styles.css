@@ -163,13 +163,13 @@ input[type=button]
     color: #d0caca;
 }
 
-#yes:hover
+#yes:hover, #submit-name:hover
 {
     background-color: #34653c;
     color: #ede8e8;
 }
 
-#yes:active
+#yes:active, #submit-name:active
 {
     background-color: #1e4224;
     color: #d0caca;  
@@ -352,6 +352,8 @@ img
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     height: 10px;
+    text-align: center;
+    color: #000000;
 }
 
 #happyBarFill
@@ -392,6 +394,7 @@ img
   border-radius: 5px;
   height: 10px;
   /* margin: 10px auto; */
+  color: #000000;
 }
 
 .bar-fill 

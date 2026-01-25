@@ -1,5 +1,9 @@
+import * as Game from "./gameInstance.js";
+
 export class EventGenerator {
+
     constructor(appInstance) {
+        this.game = appInstance;
         this.eventsFile;
         this.events;
         this.eachEvents;
@@ -62,18 +66,24 @@ export class EventGenerator {
         console.log("Im in bro")
          if (response == "yes") {
            this.answerText.innerHTML= `${this.XfundModification}CAD , ${this.XHappinessModification} Happiness , ${this.XStressModification} stress level `;
+           this.game.addMoney(parseInt(this.XfundModification));
+           this.game.addHappiness(parseInt(this.XHappinessModification));
+           this.game.addStress(parseInt(this.XStressModification));
            
          }
 
          else if (response == "no") {
            this.answerText.innerHTML= `${this.YfundModification}CAD , ${this.YHappinessModification} Happiness , ${this.YStressModification} stress level `;
+           this.game.addMoney(parseInt(this.YfundModification));
+           this.game.addHappiness(parseInt(this.YHappinessModification));
+           this.game.addStress(parseInt(this.YStressModification));
          }
 
-         
-        document.getElementById("question").hidden = true;
-        document.getElementById('answer-message-div').hidden = false;
-        document.getElementById("next").hidden = false;
-        // document.getElementById('answer-message').innerHTML = " you didn't buy spotify premium ($10/month) </br>";
+         console.log(this.answerText.innerHTML)
+        document.getElementById("question").style.visibility = 'hidden';
+        document.getElementById('answer-message-div').style.visibility = 'visible';
+        document.getElementById("next").style.visibility = 'visible';
+        document.getElementById('answer-message').style.visibility = 'visible';
 
     }
         
