@@ -15,6 +15,8 @@ export class GameInstance {
     this.playerNameTitle = document.getElementById('player-name-title');
     this.moneyDisplay = document.getElementById('money-display');
     this.dayDisplay = document.getElementById('day-display');
+    this.happyValue = document.getElementById('happy-value');
+    this.stressValue = document.getElementById('stress-value');
 
     this.eventGenerator;
 
@@ -57,10 +59,20 @@ export class GameInstance {
 
   setHappiness(happiness) {
     this.happiness = happiness;
+    this.happyValue.textContent = `${this.happiness}`;
+  }
+  
+  addHappiness(amount) {
+    this.setHappiness(Math.min(100, this.happiness + amount))
   }
 
   setStress(stress) {
     this.stress = stress;
+    this.stressValue.textContent = `${this.stress}`;
+  }
+  
+  addStress(amount) {
+    this.setStress(Math.max(0, this.stress + amount));
   }
 
   setMoney(money) {
@@ -96,18 +108,26 @@ export class GameInstance {
     this.addMoney(change);
 
     // Generate random event
-    document.getElementById('answer-message-div').hidden = true;
+    document.getElementById('answer-message-div').style.visibility = 'hidden';
     // 75% chance to be true
     if (Math.random() < 0.75) {
         console.log("generating event");
-        document.getElementById("no-event").hidden = true;
         this.eventGenerator.generateEvent();
-        document.getElementById("question").hidden = false;
-        document.getElementById("next").hidden = true;
+        document.getElementById("question").style.visibility = 'visible';
+        document.getElementById("no-event").style.visibility = 'hidden';
+        document.getElementById("next").style.visibility = 'hidden';
     } else {
-        document.getElementById("no-event").hidden = false;
-        document.getElementById("next").hidden = false;
+        console.log("no event");
+        document.getElementById("question").style.visibility = 'hidden';
+        document.getElementById("no-event").style.visibility = 'visible';
+        document.getElementById("next").style.visibility = 'visible';
     }
+
+    // set next payday
+    document.getElementById("next-payday").innerHTML = 14 * Math.ceil((this.day + 1) / 14);
+    
+    // set next rent day
+    document.getElementById("next-rent-day").innerHTML = 28 * Math.ceil((this.day + 1) / 28);
 
 
   }
@@ -119,7 +139,7 @@ export class GameInstance {
     console.log("Game Instance created");
   }
 
-  initializeEventGenerator(self) {
-    this.eventGenerator = new EventGenerator.EventGenerator();
+  initializeEventGenerator() {
+    this.eventGenerator = new EventGenerator.EventGenerator(this);
   }
 }
