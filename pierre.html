@@ -22,25 +22,28 @@
     </style>
 </head>
 <body>
-    <h2 id="player-name-title" >Player Name: ....</h2>
-    <div id="money-display">Money: $0</div>
+    <div id = "main-div" hidden>
+        <h2 id="player-name-title" >Player Name: ....</h2>
+        <div id="money-display">Money: $0</div>
 
-    <div id="card">
-        <div id="question">
-            <h2>Do you want spotify premium?</h2>
-            <p>it will cost $10</p>
-            <button id="no">no</button>
-            <button id="yes">yes</button>
-        </div>
-        <div id="purchase-message-div" hidden>
-            <span id="purchase-message"></span>
-            <button id="next">Next</button>
-        </div>
+        <div id="card">
+            <div id="question">
+                <h2>Do you want spotify premium?</h2>
+                <p>it will cost $10</p>
+                <button id="no">no</button>
+                <button id="yes">yes</button>
+            </div>
+            <div id="purchase-message-div" hidden>
+                <span id="purchase-message"></span>
+                <button id="next">Next</button>
+            </div>
 
+        </div>
     </div>
-
-    <input type="text" id="name" placeholder="Type your name...">
-    <button id="submit-name">Submit</button>
+    <div id="initial-screen">
+        <input type="text" id="name" placeholder="Type your name...">
+        <button id="submit-name">Submit</button>
+    </div>
     <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

@@ -14,6 +14,8 @@
         const nameInput = document.getElementById('name');
         const submitNameButton = document.getElementById('submit-name');
         const appInstance = new Game.GameInstance("", 1);
+        const mainDiv = document.getElementById('main-div');
+        const initialScreen = document.getElementById('initial-screen');
 
         function updateMoneyDisplay() {
             moneyDisplay.textContent = `Money: $${money}`;
@@ -46,6 +48,8 @@
                 playerNameTitle.textContent = `Player Name: ${playerName}`;
                 nameInput.value = '';
                 appInstance.setPlayerName(playerName);
+                initialScreen.hidden = true;
+                mainDiv.hidden = false
             }
         });
 
