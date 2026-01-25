@@ -59,7 +59,7 @@
             money += 1; // Add $1
             question.style.display = 'none';
             messageDiv.style.display = 'block';
-            messageDiv.textContent = " you didn't buy spotify premium ($10/month)";
+            messageDiv.innerHTML = " you didn't buy spotify premium ($10/month) </br> <button id='next'>Next</button>";
             updateMoneyDisplay();
         });
 
@@ -67,7 +67,7 @@
             money -= 10; // Remove $10
             question.style.display = 'none';
             messageDiv.style.display = 'block';
-            messageDiv.textContent = " you bought spotify premium ($10/month)";
+            messageDiv.innerHTML = " you bought spotify premium ($10/month) </br> <button id='next'>Next</button>";
             updateMoneyDisplay();
         });
 
