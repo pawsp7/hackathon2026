@@ -32,7 +32,10 @@
             <button id="no">no</button>
             <button id="yes">yes</button>
         </div>
-        <div id="purchase-message"></div>
+        <div id="purchase-message-div" hidden>
+            <span id="purchase-message"></span>
+            <button id="next">Next</button>
+        </div>
 
     </div>
 
@@ -45,7 +48,9 @@
         const moneyDisplay = document.getElementById('money-display');
         const no = document.getElementById('no');
         const yes = document.getElementById('yes');
-        const messageDiv = document.getElementById('purchase-message');
+        const next = document.getElementById('next');
+        const messageDiv = document.getElementById('purchase-message-div');
+        const messageText = document.getElementById('purchase-message');
         const playerNameTitle = document.getElementById('player-name-title');
         const nameInput = document.getElementById('name');
         const submitNameButton = document.getElementById('submit-name');
@@ -59,15 +64,17 @@
             money += 1; // Add $1
             question.style.display = 'none';
             messageDiv.style.display = 'block';
-            messageDiv.innerHTML = " you didn't buy spotify premium ($10/month) </br> <button id='next'>Next</button>";
+            messageDiv.style.visibility = "visible";
+            messageText.innerHTML = " you didn't buy spotify premium ($10/month) </br>";
             updateMoneyDisplay();
+
         });
 
         yes.addEventListener('click', () => {
             money -= 10; // Remove $10
             question.style.display = 'none';
             messageDiv.style.display = 'block';
-            messageDiv.innerHTML = " you bought spotify premium ($10/month) </br> <button id='next'>Next</button>";
+            messageText.innerHTML = " you didn't buy spotify premium ($10/month) </br>";
             updateMoneyDisplay();
         });
 
