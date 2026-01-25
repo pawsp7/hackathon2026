@@ -1,0 +1,185 @@
+
+
+p
+{
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-self: center;
+}
+
+h2, h3
+{
+    text-align: center;
+    font-size: 22.5px;
+}
+
+h2
+{
+    color:rgb(93, 104, 184);
+    text-shadow: rgb(189, 218, 225) 2px -2px 2px;
+}
+
+h3
+{
+    color: rgb(121, 112, 216);
+    text-decoration: underline 2px dashed  rgb(90, 140, 189)
+}
+
+body
+{
+    background-color: rgb(179, 193, 236);
+    background-image: image("images/group.jpg");
+}
+
+p
+{
+    color:rgb(149, 111, 206);
+    letter-spacing: 2px;
+    line-height: 25px;
+    text-align: center;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: white;
+    text-shadow: rgb(65, 33, 65) 2px 1px 2px;
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    border: 4px dashed rgb(102, 140, 168);
+    background-color:rgb(201, 217, 237);
+}
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    border: 4px dashed rgb(102, 140, 168);
+    background-color:rgb(201, 217, 237);
+}
+
+#contact, #home
+{
+    text-decoration: double underline 2px #a0afe4;
+}
+
+.home:hover, .contact:hover
+{
+    transform: scale(1.2);
+    text-decoration: double underline 2px #a9a0e4
+}
+
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px double rgb(207, 192, 255);
+    border-width: 10px 0 0 0; /* stylistic page break */
+}
+
+label
+{
+    color: rgb(125, 72, 166);
+}
+
+.formInput[type=text]
+{
+    padding: 25px;
+}
+
+input[type=button]
+{
+  background-color: rgb(190, 214, 233);
+  border: 3px solid rgb(102, 140, 168);
+  color: rgb(125, 72, 166);
+  padding: 8px 32px;
+  margin: 10px 20px 20px;
+}
+
+button
+{
+  background-color: rgb(255, 0, 0);
+  border: 7px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  width: 500px;
+  height: 100px;
+  margin: 10px 20px 20px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+
+h1
+{
+    /* border: 1px solid pink; */
+    text-decoration: none;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 100;
+}
+
+div
+{
+    align-content:center;
+    justify-content:space-around;
+}
+/* 
+div span 
+{
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 45px;
+    color:rgb(158, 108, 205);
+    text-shadow: rgb(132, 137, 205) 2px 1px 2px;
+} */
+
+.container
+{
+    display: flex;
+    background-color: rgb(88, 14, 79);
+    justify-content: center;
+}
+
+.container div
+{
+    background-color: rgb(198, 165, 186);
+    /* height: 50px; */
+    margin: 5px;
+    flex-grow: 1;  
+}
+
+.box3
+{
+    padding: 5px;
+}
+
+img
+{
+    /* position: relative; */
+    /* animation: harinder linear 2s alternate infinite;
+    transition: transform 3s; */
+    /* border-radius: 200px 200px 200px 200px; */
+    width: 200px;
+    /* padding: 0% 33.3%; */
+}
+
+.home, .contact
+{
+    font-size: large;
+    color: rgb(160, 179, 221);
+    display: flex;
+    align-content: left;
+}
+
