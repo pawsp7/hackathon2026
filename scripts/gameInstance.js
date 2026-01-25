@@ -1,0 +1,125 @@
+import * as EventGenerator from './eventGenerator.js'
+
+export class GameInstance {
+  constructor() {
+    this.playerName = '';
+    this.day = 0;
+    this.happiness = 100;
+    this.stress = 0;
+    this.money = 1000;
+    this.monthly_salary = 2400;
+    this.rent = 1000;
+    this.bills = 150;
+
+    // HTML Elements
+    this.playerNameTitle = document.getElementById('player-name-title');
+    this.moneyDisplay = document.getElementById('money-display');
+    this.dayDisplay = document.getElementById('day-display');
+
+    this.eventGenerator;
+
+    this.initializeEventGenerator();
+    this.initializeUI();
+
+    
+  }
+
+  getPlayerName() {
+    return this.playerName;
+  }
+
+  getDay() {
+    return this.day;
+  }
+
+  getHappiness() {
+    return this.happiness;
+  }
+
+  getStress() {
+    return this.stress;
+  }
+
+  getMoney() {
+    return this.money
+  }
+
+  setPlayerName(playerName) {
+    this.playerName = playerName;
+    this.playerNameTitle.textContent = `${this.playerName}`;
+    console.log("Player name set");
+  }
+
+  setDay(day) {
+    this.day = day;
+    this.dayDisplay.textContent = `${this.day}`;
+  }
+
+  setHappiness(happiness) {
+    this.happiness = happiness;
+  }
+
+  setStress(stress) {
+    this.stress = stress;
+  }
+
+  setMoney(money) {
+    this.money = money;
+    this.moneyDisplay.textContent = `${this.money}`;
+  }
+
+  addMoney(amount) {
+    this.money += amount;
+    this.setMoney(this.money);
+  }
+
+  nextDay() {
+    this.day += 1;
+    this.setDay(this.day);
+
+    var change = 0
+
+    // Receive monthly salary
+    if(this.day%14 == 0){
+        change += this.monthly_salary/2;
+    }
+
+    // Deduct rent and bills
+    if(this.day%28 == 0){
+        change -= this.rent + this.bills;
+    }
+
+    // Deduct food daily
+    change -= 25; // add condition when grocery shopping is implemented
+
+    // Apply money change
+    this.addMoney(change);
+
+    // Generate random event
+    document.getElementById('answer-message-div').hidden = true;
+    // 75% chance to be true
+    if (Math.random() < 0.75) {
+        console.log("generating event");
+        document.getElementById("no-event").hidden = true;
+        this.eventGenerator.generateEvent();
+        document.getElementById("question").hidden = false;
+        document.getElementById("next").hidden = true;
+    } else {
+        document.getElementById("no-event").hidden = false;
+        document.getElementById("next").hidden = false;
+    }
+
+
+  }
+
+  initializeUI(){
+    this.setPlayerName(this.playerName);
+    this.setMoney(this.money);
+    this.setDay(this.day);
+    console.log("Game Instance created");
+  }
+
+  initializeEventGenerator(self) {
+    this.eventGenerator = new EventGenerator.EventGenerator();
+  }
+}
