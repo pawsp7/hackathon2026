@@ -8,3 +8,63 @@ Grocery Choices,"You're shopping and see a premium brand version of your usual i
 Saving Habit,"You received a small bonus at work. Do you put it into your emergency fund?",Save the bonus,0,1,-1,Spend the bonus,50,1,0
 Streaming Subscription,"Your streaming service renews this month. Do you keep it or cancel?",Keep subscription,-12,1,0,Cancel subscription,0,-1,-1
 Spotify subscription,"Do you want spotify premium even though you have Apple Music?",Buy it,-10,1,0,Don't buy it,0,0,0
+Unexpected Phone Bill,"Your phone company charges an unexpected $25 fee. Do you dispute it?",Dispute the charge,0,-1,1,Pay it and move on,-25,0,-1
+Friend’s Birthday Gift,"Your friend’s birthday is coming up. Do you buy a $30 gift?",Buy the gift,-30,1,0,Make a handmade gift,-5,1,-1
+Work Overtime,"Your boss offers 3 hours of overtime. Do you accept?",Take overtime,60,-1,1,Decline,0,1,-1
+Car Needs Gas,"Gas prices are high today. Do you fill up or wait?",Fill up now,-50,0,-1,Wait for prices to drop,0,0,1
+Streaming Bundle Deal,"A new bundle offers more channels for $10 extra. Do you upgrade?",Upgrade,-10,1,0,Keep current plan,0,0,-1
+Grocery Sale,"Your favorite cereal is on sale. Do you buy 3 boxes?",Stock up,-12,1,0,Buy one,-4,0,-1
+Bike Repair,"Your bike chain breaks. Do you repair it yourself or pay a shop?",Repair yourself,-10,1,1,Pay a shop,-40,0,-1
+Concert Tickets,"A concert you love is happening soon. Tickets are $80. Do you go?",Buy ticket,-80,2,0,Skip it,0,-1,-1
+Emergency Fund Deposit,"You have $20 left this week. Do you save it?",Save it,0,1,-1,Spend it,20,1,0
+Used Textbook,"You can buy a used textbook for $25 or a new one for $70. Which?",Buy used,-25,0,-1,Buy new,-70,1,0
+Coffee Habit,"You want a $6 latte. Do you buy it?",Buy latte,-6,1,0,Skip it,0,-1,-1
+Gym Membership,"A gym offers a $30/month membership. Do you join?",Join,-30,1,0,Skip,0,0,-1
+Laptop Upgrade,"Your laptop is slow. Do you upgrade RAM for $60?",Upgrade,-60,1,-1,Keep using it,0,-1,1
+Public Transit Pass,"A monthly pass costs $90. Single rides cost more over time. Do you buy the pass?",Buy pass,-90,1,-1,Pay per ride,-120,0,1
+Insurance Deductible,"You can choose a lower deductible for a higher monthly cost. Which?",Lower deductible,-20,1,-1,Higher deductible,0,0,1
+Healthy vs Fast Food,"You’re hungry. Healthy meal is $12, fast food is $6. Which?",Healthy meal,-12,1,0,Fast food,-6,0,-1
+Online Course,"A course that could help your career costs $40. Do you buy it?",Buy course,-40,2,-1,Skip it,0,-1,0
+Clothing Sale,"A store offers 'Buy 1 Get 1 Half Off.' Do you buy two shirts?",Buy two,-45,1,0,Buy one,-30,0,-1
+Pet Expense,"Your pet needs a $70 vet visit. Do you go?",Go to vet,-70,1,1,Delay visit,0,-1,2
+Side Hustle Idea,"You can spend $20 on materials to start a small side hustle. Do you try it?",Start side hustle,-20,2,1,Skip it,0,0,-1
+Phone Upgrade Offer,"Your carrier offers you a new phone for $25/month. Do you upgrade?",Upgrade,-25,1,0,Keep current phone,0,0,-1
+Lunch Decision,"Coworkers invite you to lunch costing $15. Do you join?",Join lunch,-15,1,0,Bring food from home,0,0,-1
+Carpool Option,"A coworker offers to carpool and split gas. Do you join?",Join carpool,-10,1,-1,Drive alone,-25,0,1
+Library vs Buying Book,"A book you want costs $18. The library has it for free. What do you choose?",Borrow from library,0,1,-1,Buy the book,-18,1,0
+Energy Saving Choice,"Your electricity bill is high. Do you buy a $20 LED bulb to save long-term?",Buy LED bulb,-20,1,-1,Keep old bulb,0,0,1
+Parking Fee,"Parking near work costs $8/day. Do you pay or walk 15 minutes?",Pay parking,-8,1,0,Walk,0,-1,1
+Online Sale Temptation,"A $60 item you want is 30% off. Do you buy it?",Buy item,-42,1,0,Skip sale,0,0,-1
+Meal Prep Sunday,"You can meal prep for $25 or eat out all week for $70. Choose?",Meal prep,-25,1,-1,Eat out,-70,1,0
+Charity Donation,"A charity asks for a $10 donation. Do you give?",Donate,-10,2,0,Decline,0,-1,-1
+Car Wash Decision,"Your car is dirty. A wash costs $12. Do you get one?",Get car wash,-12,1,0,Skip it,0,0,-1
+Subscription Trial,"A service offers a free trial but auto-renews at $15. Do you sign up?",Sign up,0,1,1,Skip trial,0,0,-1
+Used Furniture,"You find a used desk for $30 or a new one for $120. Which?",Buy used,-30,1,0,Buy new,-120,2,0
+Weekend Trip,"Friends plan a weekend trip costing $120. Do you go?",Go on trip,-120,2,0,Stay home,0,-1,-1
+Rainy Day Savings,"You have an extra $10. Do you save it or buy snacks?",Save it,0,1,-1,Buy snacks,-10,1,0
+Phone Insurance,"Phone insurance costs $8/month. Do you add it?",Add insurance,-8,1,-1,Skip insurance,0,0,1
+DIY Gift,"A DIY gift costs $5 in materials vs $25 store-bought. Choose?",DIY gift,-5,1,-1,Buy gift,-25,1,0
+Late Fee Warning,"Your bill is due today. Pay now or risk a $15 late fee?",Pay now,-40,1,-1,Pay later,0,-1,2
+Healthy Snack Choice,"Healthy snack is $4, junk food is $2. Which?",Healthy snack,-4,1,0,Junk food,-2,0,-1
+Bus Pass Decision,"A weekly bus pass is $22 or $3 per ride. Which?",Buy pass,-22,1,-1,Pay per ride,-30,0,1
+Clothes Shopping,"You want a $50 hoodie. Do you buy it or wait for a sale?",Buy now,-50,1,0,Wait for sale,0,0,-1
+Thrift Store Find,"You see a jacket at a thrift store for $12. Do you buy it?",Buy jacket,-12,1,0,Skip it,0,0,-1
+Monthly Budget Review,"You notice you're overspending on snacks. Do you cut back?",Cut back,0,1,-1,Ignore it,-20,0,1
+Car Tire Warning,"Your tire is worn out. Replace it now or wait?",Replace tire,-80,0,-1,Wait,0,-1,2
+Coffee Subscription,"A coffee shop offers $10/month for discounts. Join?",Join,-10,1,0,Skip,0,0,-1
+Lost Wallet,"You lost your wallet and need to replace your ID for $25. Replace now?",Replace ID,-25,-1,1,Wait,0,-1,2
+Phone Storage Full,"Your phone storage is full. Pay $2/month for cloud storage?",Buy storage,-2,1,0,Delete files,0,-1,1
+Holiday Sale,"A $100 item is 40% off. Buy it?",Buy item,-60,1,0,Skip sale,0,0,-1
+Bus vs Taxi,"You're late. Taxi costs $18, bus is $3 but slower.",Take taxi,-18,1,-1,Take bus,-3,0,1
+Water Bottle Choice,"Reusable bottle costs $15. Buy it or keep buying $2 bottles?",Buy reusable,-15,1,-1,Keep buying,-2,0,1
+Laptop Battery,"Your laptop battery is dying. Replace for $40?",Replace battery,-40,1,-1,Keep using it,0,-1,1
+Impulse Candy,"Candy at checkout costs $3. Buy it?",Buy candy,-3,1,0,Skip it,0,0,-1
+Online Storage Upgrade,"Your files exceed free storage. Upgrade for $5/month?",Upgrade,-5,1,0,Manage manually,0,-1,1
+Bike vs Bus,"Bus fare is $3. Bike ride is free but tiring.",Bike,0,1,1,Take bus,-3,0,-1
+Weekend Job,"A weekend gig pays $50 but takes your free time.",Take gig,50,-1,1,Skip gig,0,1,-1
+Grocery Brand Choice,"Generic cereal is $3, brand name is $6.",Buy generic,-3,0,-1,Buy brand,-6,1,0
+Phone Case,"A protective case costs $20. Buy it?",Buy case,-20,1,-1,Skip it,0,0,1
+Streaming Rental,"A movie rental costs $6. Rent it?",Rent movie,-6,1,0,Skip movie,0,0,-1
+Laundry Decision,"Laundry at home costs $2, laundromat costs $6 but faster.",Home laundry,-2,0,1,Laundromat,-6,1,0
+Lunch Meal Deal,"Meal deal is $10, individual items total $14.",Buy meal deal,-10,1,0,Buy individually,-14,0,-1
+Savings Challenge,"Save $5 today or skip saving?",Save it,0,1,-1,Skip saving,5,0,0
