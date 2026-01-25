@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finance game</title>
+    <style>
+        #money-display {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #card {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="player-name-title" >Player Name: ....</h2>
+    <div id="money-display">Money: $0</div>
+
+    <div id="card">
+        <div id="question">
+            <h2>Do you want spotify premium?</h2>
+            <p>it will cost $10</p>
+            <button id="no">no</button>
+            <button id="yes">yes</button>
+        </div>
+        <div id="purchase-message"></div>
+
+    </div>
+
+    <input type="text" id="name" placeholder="Type your name...">
+    <button id="submit-name">Submit</button>
+    <script>
+        let money = 0;
+
+        const question = document.getElementById('question');
+        const moneyDisplay = document.getElementById('money-display');
+        const no = document.getElementById('no');
+        const yes = document.getElementById('yes');
+        const messageDiv = document.getElementById('purchase-message');
+        const playerNameTitle = document.getElementById('player-name-title');
+        const nameInput = document.getElementById('name');
+        const submitNameButton = document.getElementById('submit-name');
+        
+
+        function updateMoneyDisplay() {
+            moneyDisplay.textContent = `Money: $${money}`;
+        }
+
+        no.addEventListener('click', () => {
+            money += 1; // Add $1
+            question.style.display = 'none';
+            messageDiv.style.display = 'block';
+            messageDiv.textContent = " you didn't buy spotify premium ($10/month)";
+            updateMoneyDisplay();
+        });
+
+        yes.addEventListener('click', () => {
+            money -= 10; // Remove $10
+            question.style.display = 'none';
+            messageDiv.style.display = 'block';
+            messageDiv.textContent = " you bought spotify premium ($10/month)";
+            updateMoneyDisplay();
+        });
+
+        // Initial display update
+        updateMoneyDisplay();
+
+        submitNameButton.addEventListener('click', () => {
+            const playerName = nameInput.value.trim();
+            if (playerName) {
+                playerNameTitle.textContent = `Player Name: ${playerName}`;
+                nameInput.value = '';
+            }
+        });
+        
+    </script>
+</body>
+</html>

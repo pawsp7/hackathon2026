@@ -1,0 +1,289 @@
+p
+{
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-self: center;
+}
+
+h1
+{
+    /* border: 1px solid pink; */
+    text-decoration: none;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 100;
+    padding: 0px 100px;
+}
+
+h2, h3
+{
+    text-align: center;
+    font-size: 22.5px;
+}
+
+h2
+{
+    color:rgb(72, 88, 207);
+    /* text-shadow: rgb(189, 218, 225) 2px -2px 2px; */
+}
+
+h3
+{
+    color: rgb(121, 112, 216);
+    /* text-decoration: underline 2px dashed  rgb(90, 140, 189) */
+}
+
+h4
+{
+    color: rgb(102, 140, 168);
+    font-size: 30px;
+}
+
+body
+{
+    background-color: rgb(179, 193, 236);
+    background-image: image("images/group.jpg");
+}
+
+p
+{
+    color:rgb(149, 111, 206);
+    letter-spacing: 2px;
+    line-height: 25px;
+    text-align: center;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: white;
+    text-shadow: rgb(65, 33, 65) 2px 1px 2px;
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    border: 4px dashed rgb(102, 140, 168);
+    background-color:rgb(201, 217, 237);
+}
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    border: 4px dashed rgb(102, 140, 168);
+    background-color:rgb(201, 217, 237);
+}
+
+#contact, #home
+{
+    text-decoration: double underline 2px #a0afe4;
+}
+
+.home:hover, .contact:hover
+{
+    transform: scale(1.2);
+    text-decoration: double underline 2px #a9a0e4
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px double rgb(207, 192, 255);
+    border-width: 10px 0 0 0; /* stylistic page break */
+}
+
+label
+{
+    color: rgb(125, 72, 166);
+}
+
+.formInput[type=text]
+{
+    padding: 25px;
+}
+
+input[type=button]
+{
+  background-color: rgb(190, 214, 233);
+  border: 3px solid rgb(102, 140, 168);
+  color: rgb(125, 72, 166);
+  padding: 8px 32px;
+  margin: 10px 20px 20px;
+}
+
+button
+{
+  /* background-color: rgb(203, 181, 181); */
+  /* border: 7px solid rgb(0, 0, 0); */
+  color: rgb(0, 0, 0);
+  /* width: 50%; */
+  height: 80px;
+  margin: 10px 20px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: rgb(205, 203, 224); 
+  width: 90%;       
+  padding: 5px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  /* margin: 10px auto; */
+}
+
+.stats
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 300px;
+    justify-content: center;
+}
+
+.stats section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.status section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 300px;
+    width: 90%;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+section 
+{
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+.plz
+{
+    width: 100px;
+}
+
+.container
+{
+    display: flex;
+    background-color: rgb(88, 14, 79);
+    justify-content: center;
+}
+
+.container div
+{
+    background-color: rgb(198, 165, 186);
+    /* height: 50px; */
+    margin: 5px;
+    flex-grow: 1;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box4
+{
+    padding: 15px 15px 0px 15px;
+}
+
+.box3
+{
+    padding: 5px;
+}
+
+img
+{
+    /* position: relative; */
+    /* transition: transform 3s; */
+    border-radius: 200px 200px 200px 200px;
+    width: 60%;
+    margin: 5% 33.3%;
+}
+
+.home, .contact
+{
+    font-size: large;
+    color: rgb(160, 179, 221);
+    display: flex;
+    align-content: left;
+}
+
+/* 
+.bar-container {
+  width: 100%;
+  max-width: 400px;
+  height: 30px;
+  background-color: #ddd;
+  border: 2px solid #999;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: rgb(121, 112, 216);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+} */
+
+.happyBar
+{
+    background-color: rgb(205, 203, 224); 
+    width: 70%;
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 10px;
+    /* margin: 10px auto; */
+}
+
+.stressBar 
+{
+  background-color: rgb(205, 203, 224); 
+  width: 70%;       
+  padding: 5px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  height: 10px;
+  /* margin: 10px auto; */
+}
+
+.center
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* max-width: 300px; */
+    /* width: 90%; */
+    justify-content: center;
+    flex-grow: 1;
+}
+
