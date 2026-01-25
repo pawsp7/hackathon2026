@@ -1,0 +1,10 @@
+Event Name,Event Text,Option X Text,X Fund Modification,X Happiness Modification,X Stress Modification,Option Y Text,Y Fund Modification,Y Happiness Modification,Y Stress Modification
+Car Repair Needed,"Your mechanic says your car needs a $300 repair to stay safe. Do you fix it now or delay it?",Fix it now,-300,-1,-1,Delay the repair,0,0,2
+Freelance Opportunity,"A client offers you a weekend freelance job that pays well but takes up your free time. Do you accept?",Accept the gig,150,-1,1,Decline the gig,0,1,-1
+Sale at the Mall,"You see a jacket on sale that you don't need but really like. Do you buy it?",Buy the jacket,-40,1,0,Skip the purchase,0,0,-1
+Credit Card Bill,"Your credit card bill is due. You can pay the full amount or just the minimum. What do you do?",Pay full amount,-120,1,-1,Pay minimum,-20,0,2
+Getting to Work,"Your bus is delayed and you're running late. You can take a rideshare instead. What do you choose?",Take rideshare,-18,0,-1,Wait for bus,0,-1,1
+Grocery Choices,"You're shopping and see a premium brand version of your usual item. Do you upgrade?",Buy premium brand,-10,1,0,Stick to budget brand,0,0,-1
+Saving Habit,"You received a small bonus at work. Do you put it into your emergency fund?",Save the bonus,0,1,-1,Spend the bonus,50,1,0
+Streaming Subscription,"Your streaming service renews this month. Do you keep it or cancel?",Keep subscription,-12,1,0,Cancel subscription,0,-1,-1
+Spotify subscription,"Do you want spotify premium even though you have Apple Music?",Buy it,-10,1,0,Don't buy it,0,0,0

@@ -38,7 +38,7 @@
 
     <input type="text" id="name" placeholder="Type your name...">
     <button id="submit-name">Submit</button>
-    <script>
+    <script type="module">
         let money = 0;
 
         const question = document.getElementById('question');
@@ -81,6 +81,12 @@
                 nameInput.value = '';
             }
         });
+
+        const events = await fetch('random.csv');
+        const eventss = await events.text();
+        const eachEvents= eventss.split(`\n`);
+        const eachEventInDifferentArrays = eachEvents.map(eachEvent => eachEvent.split(","));
+        console.log(eachEventInDifferentArrays);
         
     </script>
 </body>
