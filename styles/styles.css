@@ -76,6 +76,7 @@ a:hover
 {
     display: flex;
     justify-content: center;
+    padding: 50px;
 }
 
 .header, .footer
@@ -147,8 +148,8 @@ input[type=button]
 .stats button:hover
 {
     background-color: #C75C5C;
-    border: #00C27A 4px solid;
-    border-radius: 5px;
+    border: #194b39 4px solid;
+    border-radius: 7px;
 }
 
 #no:hover
@@ -173,6 +174,22 @@ input[type=button]
 {
     background-color: #1e4224;
     color: #d0caca;  
+}
+
+#submit-name
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+#name
+{
+    margin-top: 5%;
+    padding: 5%;
+    background-color:#0daeb3;
+    border: 2pxx solid #093737;
 }
 
 button
@@ -344,15 +361,34 @@ img
   transition: width 0.3s ease;
 } */
 
+.stressBar 
+{
+  background-color: #C75C5C; 
+  width: 70%;       
+  padding: 5px;
+  font-size: 25px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  height: 15px;
+  color: #000000;
+}
+
+p.happyBar, p.stressBar
+{
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 13px; 
+}
+
 .happyBar
 {
     background-color: #00C27A; 
     width: 70%;
+    font-size: 25px;
     padding: 5px;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
-    height: 10px;
-    text-align: center;
+    height: 15px;
     color: #000000;
 }
 
@@ -366,35 +402,12 @@ img
     height: 10px;
 }
 
-/* .happyBar {
-  background-color: rgb(205, 203, 224);
-  width: 70%;
-  height: 10px;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  margin: 10px auto;
-  position: relative;
-  overflow: hidden;
-} */
-
 .happyBarFill 
 {
   background-color: rgb(43, 35, 120);
   height: 100%;
   width: 0%;
   transition: width 0.3s ease;
-}
-
-.stressBar 
-{
-  background-color: #C75C5C; 
-  width: 70%;       
-  padding: 5px;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  height: 10px;
-  /* margin: 10px auto; */
-  color: #000000;
 }
 
 .bar-fill 

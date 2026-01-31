@@ -56,6 +56,7 @@ export class EventGenerator {
             this.YHappinessModification , 
             this.YStressModification 
         ] = differentArrays;
+        
         this.questionText.innerHTML=this.eventText;
        
         this.yesButton.innerHTML=this.OptionXText;
