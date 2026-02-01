@@ -112,7 +112,7 @@ export class GameInstance {
     {
       confirm("YOU COULDN'T TAKE THE STRESS ANYMORE. YOU KILLED YOURSELF.");
     }
-    if(this.happiness <= 100)
+    if(this.happiness <= 0)
     {
       confirm("You couldn't find a reason to keep going.\n                        ~~~\n             You killed yourself.");
     }
