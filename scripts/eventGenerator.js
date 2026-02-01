@@ -38,7 +38,7 @@ export class EventGenerator {
     }
 
     generateEvent() {
-        this.eventIndex = Math.ceil(Math.random()*10)
+        this.eventIndex = Math.ceil(Math.random()*(this.eachEventInDifferentArrays.length-1))
         var differentArrays = this.eachEventInDifferentArrays[this.eventIndex];
         console.log(differentArrays);
 
@@ -56,7 +56,7 @@ export class EventGenerator {
             this.YHappinessModification , 
             this.YStressModification 
         ] = differentArrays;
-        
+
         this.questionText.innerHTML=this.eventText;
        
         this.yesButton.innerHTML=this.OptionXText;
