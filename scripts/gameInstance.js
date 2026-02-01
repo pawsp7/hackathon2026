@@ -101,14 +101,40 @@ export class GameInstance {
         change -= this.rent + this.bills;
     }
 
+
+
+
+
+
+
+    //lose conditions
+    if(this.stress >= 100)
+    {
+      confirm("YOU COULDN'T TAKE THE STRESS ANYMORE. YOU KILLED YOURSELF.");
+    }
+    if(this.happiness <= 100)
+    {
+      confirm("You couldn't find a reason to keep going.\n                        ~~~\n             You killed yourself.");
+    }
+    if(this.money <= 0)
+    {
+      confirm("YOU COULDNT AFFORD TO LIVE ANYMORE. YOU KILLED YOURSELF.");
+    }
+
+
+
+
+
     // Deduct food daily
-    change -= 25; // add condition when grocery shopping is implemented
+   // change -= 25;
+   // add condition when grocery shopping is implemented
 
     // Apply money change
     this.addMoney(change);
 
     // Generate random event
     document.getElementById('answer-message-div').style.visibility = 'hidden';
+
     // 75% chance to be true
     if (Math.random() < 0.75) {
         console.log("generating event");

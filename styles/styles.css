@@ -287,6 +287,16 @@ button
     display: block;
 }
 
+.center h3
+{
+    border: #000000 5px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
 .status
 {
     display: flex;
@@ -432,4 +442,5 @@ p.happyBar, p.stressBar
   border-radius: 5px;
   transition: width 0.3s ease;
 }
+
 
